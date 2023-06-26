@@ -1,0 +1,21 @@
+public class Solution {
+    public void moveZeroes(int[] nums) {
+        int i = 0; // pointer to iterate through the array
+
+        // Iterate through the array
+        for (int num : nums) {
+            // If the current element is non-zero
+            if (num != 0) {
+                // Move the non-zero element to the front of the array
+                nums[i] = num;
+                i++;
+            }
+        }
+
+        // Fill the remaining positions from i to the end with zeroes
+        while (i < nums.length) {
+            nums[i] = 0;
+            i++;
+        }
+    }
+}
